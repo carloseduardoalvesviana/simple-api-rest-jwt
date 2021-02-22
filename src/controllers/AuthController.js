@@ -18,7 +18,7 @@ module.exports = {
           process.env.JWT_SECRET || "123", 
         {
           algorithm: "HS256",
-          expiresIn: "6h"
+          expiresIn: process.env.JWT_TIME_EXPIRATION_TOKEN || "6h"
         }
       );
 
